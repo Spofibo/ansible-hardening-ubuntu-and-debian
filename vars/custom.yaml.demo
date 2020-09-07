@@ -1,0 +1,5 @@
+---
+
+ssh_server_ports: [2222]
+custom_ssh_user_name: jim
+custom_ssh_user_public_key: ~/.ssh/my_custom_key.pub
