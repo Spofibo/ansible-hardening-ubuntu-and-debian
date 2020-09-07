@@ -4,17 +4,18 @@
 A repository that leverages public Ansible Galaxy playbooks to help speed up the process of
 hardening your Debian/Ubuntu servers.
 
-This playbook is meant to be copied and adjusted as per the individual requirements.
+This playbook is meant to be copied and adjusted as per the individual requirements, serving as the
+fundation of further refinment of your servers.
 
-It uses Vagrant to test the implementation, and it's then later used in the `Harden Distros with Packer` repository
+*Vagrant* is used to test the logic.
 
 ## Ansible
 ### Roles
 The list of roles the playbook executes in sequence:
 * update-distro
-* [jnv.unattended-upgrades][1] (Ansible Galaxy dependency)
-* [dev-sec.os-hardening][2] (Ansible Galaxy dependency)
-* [dev-sec.ssh-hardening][3] (Ansible Galaxy dependency)
+* [jnv.unattended-upgrades][1] (external dependency) - Check out their page to see the list of supported variables.
+* [dev-sec.os-hardening][2] (external dependency) - Check out their page to see the list of supported variables.
+* [dev-sec.ssh-hardening][3] (external dependency) - Check out their page to see the list of supported variables.
 * custom-ssh-user
 
 ### Tags
