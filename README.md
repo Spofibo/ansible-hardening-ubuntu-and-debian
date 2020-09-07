@@ -4,6 +4,10 @@
 A repository that leverages public Ansible Galaxy playbooks to help speed up the process of
 hardening your Debian/Ubuntu servers.
 
+This playbook is meant to be copied and adjusted as per the individual requirements.
+
+It uses Vagrant to test the implementation, and it's then later used in the `Harden Distros with Packer` repository
+
 ## Ansible
 ### Roles
 The list of roles the playbook executes in sequence:
@@ -22,7 +26,7 @@ The list of roles the playbook executes in sequence:
 
 ## Usage
 
-### Getting Started
+### Getting Started
 * Copy `custom.yaml.demo` file from the `vars/` directory to `custom.yaml`
 * Adjust the variable values in `custom.yaml` to fit your needs.
     * `ssh_server_ports`: The ports you want your ssh server to listen on. Default is `22`
