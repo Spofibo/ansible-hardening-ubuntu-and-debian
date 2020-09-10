@@ -1,0 +1,12 @@
+---
+
+# SSH Hardening
+ssh_server_ports: [ "{{ custom_ssh_main_server_port }}" ]
+sftp_enabled: true # Required to avoid some Ansible errors
+
+# fail2ban
+fail2ban_services:
+  - name: sshd
+    port: "{{ custom_ssh_main_server_port }}"
+    maxretry: 5
+    bantime: -1
