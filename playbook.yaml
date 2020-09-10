@@ -7,11 +7,9 @@
     - vars/custom.yaml
 
   roles:
+    - { role: custom-ssh-user, tags: custom-ssh-user }
     - { role: update-distro, tags: update-distro }
     - { role: jnv.unattended-upgrades, tags: unattended-upgrades }
     - { role: dev-sec.os-hardening, tags: os-hardening }
-    - role: dev-sec.ssh-hardening
-      tags: ssh-hardening
-      sftp_enabled: true
-    - role: custom-ssh-user
-      tags: custom-ssh-user
+    - { role: dev-sec.ssh-hardening, tags: ssh-hardening }
+    - { role: oefenweb.fail2ban, tags: fail2ban }

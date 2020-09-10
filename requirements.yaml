@@ -3,3 +3,4 @@
 - src: jnv.unattended-upgrades
 - src: dev-sec.os-hardening
 - src: dev-sec.ssh-hardening
+- src: oefenweb.fail2ban
