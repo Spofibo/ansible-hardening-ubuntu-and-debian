@@ -1,5 +1,17 @@
 ---
 
-ssh_server_ports: [2222]
+# Custom roles vars
 custom_ssh_user_name: jim
 custom_ssh_user_public_key: ~/.ssh/my_custom_key.pub
+custom_ssh_main_server_port: 2222
+
+# SSH Hardening
+ssh_server_ports: [ "{{ custom_ssh_main_server_port }}" ]
+sftp_enabled: true # Required to avoid some Ansible errors
+
+# fail2ban
+fail2ban_services:
+  - name: sshd
+    port: "{{ custom_ssh_main_server_port }}"
+    maxretry: 5
+    bantime: -1

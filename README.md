@@ -30,9 +30,9 @@ The list of roles the playbook executes in sequence:
 ### Getting Started
 * Copy `custom.yaml.demo` file from the `vars/` directory to `custom.yaml`
 * Adjust the variable values in `custom.yaml` to fit your needs.
-    * `ssh_server_ports`: The ports you want your ssh server to listen on. Default is `22`
     * `custom_ssh_user_name` Set the username for your new ssh user. *REQUIRED*
     * `custom_ssh_user_public_key` Set the path to your public key. Default is `~/.ssh/id_rsa.pub`
+    * `custom_ssh_main_server_port`: The ports you want your ssh server to listen on. Default is `22`
 
 ### Sequence of commands
 * `vagrant up` -> Start the machine and provision it automatically
