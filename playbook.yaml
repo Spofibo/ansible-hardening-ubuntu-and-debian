@@ -4,6 +4,7 @@
   hosts: all
 
   vars_files:
+    - vars/configs.yaml
     - vars/custom.yaml
 
   roles:
