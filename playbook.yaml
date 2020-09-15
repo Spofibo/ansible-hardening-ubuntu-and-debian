@@ -4,6 +4,7 @@
   hosts: all
 
   vars_files:
+    - vars/configs.yaml
     - vars/custom.yaml
 
   roles:
@@ -13,3 +14,4 @@
     - { role: dev-sec.os-hardening, tags: os-hardening }
     - { role: dev-sec.ssh-hardening, tags: ssh-hardening }
     - { role: oefenweb.fail2ban, tags: fail2ban }
+    - { role: oefenweb.ufw, tags: ufw }

@@ -1,0 +1,23 @@
+---
+
+# OS Hardening
+ufw_manage_defaults: false # disable UFW patching here as it'll be handled later
+
+# SSH Hardening
+ssh_server_ports: [ "{{ custom_ssh_main_server_port }}" ]
+sftp_enabled: true # Required to avoid some Ansible errors
+
+# fail2ban
+fail2ban_services:
+  - name: sshd
+    port: "{{ custom_ssh_main_server_port }}"
+    maxretry: 5
+    bantime: -1
+
+# ufw
+ufw_logging: "medium"
+ufw_rules:
+  - rule: allow
+    to_port: "{{ custom_ssh_main_server_port }}"
+    protocol: tcp
+    comment: 'allow incoming connection on custom ssh port'
