@@ -51,10 +51,8 @@ doc/
 # Box storage for spec
 test/vagrant-spec/boxes/*.box
 
-# Ansible Galaxy
-roles/*
-!roles/update-distro
-!roles/custom-ssh-user
+# Ansible Galaxy roles
+roles/*.*
 
 # User specific vars
 vars/custom.yaml
